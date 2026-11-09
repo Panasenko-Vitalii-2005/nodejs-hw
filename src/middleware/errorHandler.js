@@ -1,6 +1,4 @@
-import createHttpError from 'http-errors';
-
-const { HttpError } = createHttpError;
+import { HttpError } from 'http-errors';
 
 /**
  * @param {unknown} err
