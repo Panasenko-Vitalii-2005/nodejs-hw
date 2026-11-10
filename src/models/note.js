@@ -9,10 +9,11 @@ const noteSchema = new mongoose.Schema(
       type: String,
       enum: TAGS,
       default: 'Todo',
-      index: true,
     },
   },
   { timestamps: true, collection: 'notes' },
 );
+
+noteSchema.index({ tag: 1 });
 
 export const Note = mongoose.model('Note', noteSchema);
